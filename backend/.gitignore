@@ -12,7 +12,6 @@ logs/
 # Spring Boot specific
 spring-boot-loader/
 *.war
-*.jar
 
 # IntelliJ IDEA
 .idea/
