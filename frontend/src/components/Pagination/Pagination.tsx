@@ -13,7 +13,7 @@ const Pagination: React.FC<PaginationProps> = (props) => {
     setCurrentPage(pageNumber);
 
     const nextPage = (command: string) => {
-        if (command === "plus") {
+        if (command === "next") {
             if (pageNumber < totalPages) {
                 setPageNumber(pageNumber + 1);
                 setCurrentPage(pageNumber + 1);
@@ -46,7 +46,7 @@ const Pagination: React.FC<PaginationProps> = (props) => {
                 <a href="#" onClick={() => jumpPage(1)}>« First</a>
             </li>
             <li className={pageNumber <= 1 ? "disabled" : ""}>
-                <a href="#" onClick={() => nextPage("minus")}>‹ Prev</a>
+                <a href="#" onClick={() => nextPage("prev")}>‹ Prev</a>
             </li>
             {visiblePageNumber(pageNumber - 1)}
             <li className="active">
@@ -56,7 +56,7 @@ const Pagination: React.FC<PaginationProps> = (props) => {
             {visiblePageNumber(pageNumber + 2)}
             {visiblePageNumber(pageNumber + 3)}
             <li className={pageNumber >= totalPages ? "disabled" : ""}>
-                <a href="#" onClick={() => nextPage("plus")}>Next ›</a>
+                <a href="#" onClick={() => nextPage("next")}>Next ›</a>
             </li>
             <li className={pageNumber >= totalPages ? "disabled" : ""}>
                 <a href="#" onClick={() => jumpPage(totalPages)}>Last »</a>

@@ -1,9 +1,3 @@
---CREATE TABLE IF NOT EXISTS article (
---    id BIGINT AUTO_INCREMENT PRIMARY KEY,
---    name VARCHAR(255) NOT NULL,
---    description TEXT
---);
-
 CREATE TABLE IF NOT EXISTS articles (
    id                      BIGINT  AUTO_INCREMENT  PRIMARY KEY
   ,articleid               INTEGER  NOT NULL
